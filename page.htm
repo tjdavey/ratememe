@@ -1,0 +1,71 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>RateMeme</title>
+
+  <link rel="stylesheet" href="/assets/style.css">
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <a href="/">
+                <h1><span class="light">Rate</span>Meme</h1>
+            </a>
+        </div>
+        <div class="memebox">
+            <h2>{{title}}</h2>
+            {% if image %}
+            <img src="{{image}}" alt="Meme">
+            <div class="addratingbox">
+                <form action="/rate/{{meme}}" method="post">
+                    <label for="ratingselect">Add Rating:</label>
+                    <select name="rating" id="ratingselect">
+                        <option value="1">&#9733;&#9734;&#9734;&#9734;&#9734;</option>
+                        <option value="2">&#9733;&#9733;&#9734;&#9734;&#9734;</option>
+                        <option value="3">&#9733;&#9733;&#9733;&#9734;&#9734;</option>
+                        <option value="4">&#9733;&#9733;&#9733;&#9733;&#9734;</option>
+                        <option value="5">&#9733;&#9733;&#9733;&#9733;&#9733;</option>
+                    </select>
+                    <input type="submit" value="Rate!" >
+                </form>
+            </div>
+            <div class="currentratingbox">
+                Current Rating: {{'%0.1f' % rating}}
+            </div>
+            {% else %}
+            <img src="/assets/nomemes.jpg" alt="Meme">
+            {% endif %}
+        </div>
+        {% if upload_url %}
+        <div class="addbox">
+            <h3><span class="light">Add</span>Meme</h3>
+            <form action="{{upload_url}}" method="post" enctype="multipart/form-data">
+                <p>
+                You can easily add your own memes to RateMeme. Upload now!
+                </p>
+                <div class="fileuploadbox">
+                    <input name="file" type="file">
+                </div>
+                <p class="disclaimer">
+                    I agree not to upload content I do not have permission to distribute, content which is illegal to possess or publish, or which does not meet the requirement of 'mildly amusing'. 
+                </p>
+                <input type="submit" id="addmemesubmit" value="Add Meme">
+            </form>
+        </div>
+        {% endif %}
+        <div class="aboutbox">
+            <h3>About RateMeme</h3>
+            <p>RateMeme is a fully-functional demonstration of several Google App Engine technologies. It was built and designed to introduce beginners to the power and ease with which basic web applications can be developed on the Google Cloud Platform.</p>
+            <p>This application was designed and implemented by <a href="http://tristandavey.com">Tristan Davey</a>. The source of this entire application is available under the <a href="http://opensource.org/licenses/MIT">MIT Licence</a> on <a href="https://github.com/tjdavey/ratememe">Github</a>.</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,98 @@
+@import url(http://fonts.googleapis.com/css?family=Comfortaa:400,700,300);
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #5B6C83;
+    font-family: sans-serif;
+    color: #fff;
+}
+
+h1, h2, h3 {
+    font-family: 'Comfortaa', sans-serif;
+}
+
+h2, h3 {
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.7em;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.3em;
+}
+
+a, a:link, a:visited {
+    color: #ccc;
+    text-decoration: none;
+}
+
+a:hover, a:active {
+    color: #fff;
+    text-decoration: underline;
+}
+    
+
+.header {
+    background-color: #38526E;
+    border-top: 10px solid #0D141E;
+    color: #fff;
+    padding: 10px 50px;
+}
+
+.memebox, .addbox, .aboutbox {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    margin: 30px auto;
+    max-width: 600px;
+    padding: 15px;
+    text-align: left;
+    background-color: #38526E;
+}
+
+.memebox img {
+    display: block;
+    margin: 15px auto;
+}
+
+.memebox .addratingbox {
+    float: right;
+}
+
+.addbox input[type=submit], .fileuploadbox {
+    background-color: #0D141E;
+    display: block;
+    border: none;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    padding: 10px;
+}
+
+.addbox input[type=submit] {
+    width: 100%;
+    background-color: #0D141E;
+    color: #fff;
+    font-weight: 700;  
+}
+
+.addbox input[type=submit]:hover, .addbox input[type=submit]:active {
+    background-color: #1C2A40;
+}
+
+.addbox .disclaimer {
+    font-size: 0.6em;
+    color: #0D141E;
+}
+
+.light {
+    font-weight: 300;
+}
